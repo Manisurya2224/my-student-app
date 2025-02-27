@@ -11,6 +11,8 @@ const CreateStudent = () => {
     subject3Marks: "",
   });
 
+  //testing git commands
+
   const [savedStudent, setSavedStudent] = useState(null);
   const navigate = useNavigate(); // Initialize navigate function
 
