@@ -21,9 +21,13 @@ const UpdateStudent = () => {
   };
 
   const handleBack = () => {
-    setFetchedStudent(null); // Reset fetched student data
-    setUpdatedStudent(null); // Reset updated student data
-    setStudent({ id: "", name: "", subject1Marks: "", subject2Marks: "", subject3Marks: "" }); // Reset form
+    if (fetchedStudent && updateStudent){
+      setFetchedStudent(null); // Reset fetched student data
+      setUpdatedStudent(null); // Reset updated student data
+      setStudent({ id: "", name: "", subject1Marks: "", subject2Marks: "", subject3Marks: "" }); // Reset form
+    } else{
+      navigate("/");
+    } 
   };
 
   const handleFetchStudent = async () => {

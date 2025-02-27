@@ -12,21 +12,28 @@ const CreateStudent = () => {
   });
 
   const [savedStudent, setSavedStudent] = useState(null);
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setStudent({ ...student, [e.target.name]: e.target.value });
   };
 
-  const handleBack = () => {
-    setSavedStudent(null); // Reset saved student data
+  const handleBack = (e) => {
+    debugger;
+    e.preventDefault();
+    if(savedStudent) {
+      setSavedStudent(null);      
+    } else {
+      navigate("/");
+    }
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); 
 
     try {
-      const data = await createStudent(student); // Use service function
+      const data = await createStudent(student); 
       setSavedStudent(data);
       setStudent({ name: "", subject1Marks: "", subject2Marks: "", subject3Marks: "" });
     } catch (error) {
@@ -74,8 +81,6 @@ const CreateStudent = () => {
           </ul>
         </div>
       )}
-
-      {/* Home and Back buttons */}
       <div className="navigation-buttons">
         <button onClick={() => navigate("/")}>Home</button>
         <button onClick={handleBack}>Back</button>
