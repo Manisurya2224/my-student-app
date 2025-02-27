@@ -11,9 +11,6 @@ const CreateStudent = () => {
     subject3Marks: "",
   });
 
-  //pavan
-  //surya
-
   const [savedStudent, setSavedStudent] = useState(null);
   const navigate = useNavigate();
 
