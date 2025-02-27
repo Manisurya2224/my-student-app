@@ -11,10 +11,8 @@ const CreateStudent = () => {
     subject3Marks: "",
   });
 
-  //testing git commands
-
   const [savedStudent, setSavedStudent] = useState(null);
-  const navigate = useNavigate(); // Initialize navigate function
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setStudent({ ...student, [e.target.name]: e.target.value });
