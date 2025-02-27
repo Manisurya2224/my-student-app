@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* App.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full page height */
+  flex-direction: column;
+  background-image: url("https://wallpapercat.com/w/full/2/c/8/5825739.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between buttons */
+}
+
+.create-button {
+  background-color: #1cb9e2;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  font-family: monospace;
+}
+
+.update-button {
+  background-color: #5d9c5d;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  font-family: monospace;
+}
+
+h1 {
+  color: white;
+  font-family: monospace;
+}
