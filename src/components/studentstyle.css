@@ -65,5 +65,19 @@
   .navigation-buttons button:last-child {
     background-color: gray; /* Back button */
   }
+
+  /* Style for input fields with errors */
+.error-input {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+/* Style for error messages */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
   
   
